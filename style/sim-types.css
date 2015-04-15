@@ -406,7 +406,13 @@ small.type {
 }
 .movemenu button.type-Fire small
 {
-	color: hsl(25,40%,41%);
+background: -moz-radial-gradient(center, ellipse cover, rgba(255,115,84,1) 0%, rgba(128,74,13,1) 100%); /* ff3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,115,84,1)), color-stop(100%, rgba(128,74,13,1))); /* safari4+,chrome */
+background:-webkit-radial-gradient(center, ellipse cover, rgba(255,115,84,1) 0%, rgba(128,74,13,1) 100%); /* safari5.1+,chrome10+ */
+background: -o-radial-gradient(center, ellipse cover, rgba(255,115,84,1) 0%, rgba(128,74,13,1) 100%); /* opera 11.10+ */
+background: -ms-radial-gradient(center, ellipse cover, rgba(255,115,84,1) 0%, rgba(128,74,13,1) 100%); /* ie10+ */
+background:radial-gradient(ellipse at center, rgba(255,115,84,1) 0%, rgba(128,74,13,1) 100%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF7354', endColorstr='#804A0D',GradientType=1 ); /* ie6-9 */
 }
 .movemenu button.type-Water small
 {
