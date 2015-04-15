@@ -144,19 +144,6 @@ var BattleEffects = {
 })();
 var BattleBackdrops = [
 	'bg-beach.png',
-	'bg-beachshore.png',
-	'bg-desert.png',
-	'bg-meadow.png',
-	'bg-thunderplains.png',
-	'bg-city.png',
-	'bg-earthycave.png',
-	'bg-mountain.png',
-	'bg-volcanocave.png',
-	'bg-dampcave.png',
-	'bg-forest.png',
-	'bg-river.png',
-	'bg-deepsea.png',
-	'bg-icecave.png',
 	'bg-route.png'
 ];
 var BattleStats = {
