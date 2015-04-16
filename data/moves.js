@@ -15771,6 +15771,25 @@ exports.BattleMovedex = {
 		target: "all",
 		type: "Psychic"
 	},
+	"Bitch Slap": {
+		num: 621,
+		accuracy: 100,
+		basePower: 110,
+		category: "Physical",
+		desc: "Deals damage to one adjacent target with a 50% chance to confuse it. Power doubles if user has already taken damage that turn or has been Taunted.",
+		shortDesc: "50% chance to confuse the target.",
+		id: "bitchslap",
+		isViable: true,
+		name: "Bitch Slap",
+		pp: 8,
+		priority: 0,
+		secondary: {
+			chance: 50,
+			volatileStatus: 'confusion'
+		},
+		target: "normal",
+		type: "Normal"
+	},
 	"woodhammer": {
 		num: 452,
 		accuracy: 100,
