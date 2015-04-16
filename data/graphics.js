@@ -21,6 +21,11 @@ This license DOES NOT extend to any other files of the Pokemon replay viewer.
 
 */
 
+var Sprites = {
+	draconeon: {
+		url: 'fx/draconeon.png',
+		w: 100, h: 100
+}
 var BattleEffects = {
 	wisp: {
 		url: 'fx/wisp.png',
