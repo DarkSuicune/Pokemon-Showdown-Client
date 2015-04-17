@@ -830,8 +830,8 @@ var Tools = {
 		pokemon = Tools.getTemplate(pokemon);
 		var spriteData = {
 			w: 96,
-			h: 96,
-			url: Tools.resourcePrefix + '/Users/Charlotte/Desktop/Sprites',
+ 			h: 96,
+-			url: Tools.resourcePrefix + 'sprites/',
 			isBackSprite: false,
 			cryurl: '',
 			shiny: pokemon.shiny
