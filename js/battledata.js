@@ -831,7 +831,7 @@ var Tools = {
 		var spriteData = {
 			w: 96,
 			h: 96,
-			url: Tools.resourcePrefix + 'sprites/',
+			url: Tools.resourcePrefix + '/Users/Charlotte/Desktop/Sprites',
 			isBackSprite: false,
 			cryurl: '',
 			shiny: pokemon.shiny
