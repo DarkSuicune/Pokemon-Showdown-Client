@@ -1,3 +1,9 @@
+var customSprites = {
+	'draconeon-front': 'http://i.imgur.com/1pEvWZP.png',
+	'draconeon-back': 'http://i.imgur.com/vRllR2o.png',
+	'draconeon-front-shiny': 'http://i.imgur.com/JVPerZG.png',
+	'draconeon-back-shiny': 'http://i.imgur.com/E3LYQfR.png',
+};
 (function($) {
 
 	if (window.nodewebkit) {
