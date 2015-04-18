@@ -900,7 +900,7 @@ var Tools = {
 		var nameString = name + '-' + facing;
 		if (pokemon.shiny) nameString += '-shiny';
 		if (customSprites[nameString]) spriteData.url = customSprites[nameString];
-		
+		alert(nameString);
 		return spriteData;
 	},
 
