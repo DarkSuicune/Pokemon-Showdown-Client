@@ -7,6 +7,10 @@ var customSprites = {
 	'pugneon-back': 'http://i.imgur.com/fwLan0i.png',
 	'pugneon-front-shiny': 'http://i.imgur.com/1ZmjTjP.png',
 	'pugneon-back-shiny': 'http://i.imgur.com/GgLYM24.png',
+	'argenteon-front': 'http://i.imgur.com/ecuUlLm.png',
+	'argenteon-back': 'http://i.imgur.com/M0e3lNm.png',
+	'argenteon-front-shiny': 'http://i.imgur.com/ShXGXck.png',
+	'argenteon-back-shiny': 'http://i.imgur.com/8QJ0p3j.png',
 };
 (function($) {
 
