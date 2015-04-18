@@ -1041,7 +1041,7 @@ var Tools = {
 			id+='-f';
 		}
 		var nameString = id.toLowerCase() + "-front" + shiny;
-		if (customSprites[nameString]) return 'background-image:url(' + customSprites[nameString]] + ')';
+		if (customSprites[nameString]) return 'background-image:url(' + customSprites[nameString] + ')';
 		return 'background-image:url(' + Tools.resourcePrefix + 'sprites/bw'+shiny+'/'+id+'.png)';
 	},
 
