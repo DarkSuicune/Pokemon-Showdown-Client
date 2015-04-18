@@ -891,12 +891,6 @@ var Tools = {
 
 		spriteData.url += dir+'/' + name + '.png';
 		
-		var customSprites = {
-			'draconeon-front': 'http://i.imgur.com/1pEvWZP.png',
-			'draconeon-back': 'http://i.imgur.com/vRllR2o.png',
-			'draconeon-front-shiny': 'http://i.imgur.com/JVPerZG.png',
-			'draconeon-back-shiny': 'http://i.imgur.com/E3LYQfR.png',
-		};
 		var nameString = name + '-' + facing;
 		if (pokemon.shiny) nameString += '-shiny';
 		if (customSprites[nameString]) spriteData.url = customSprites[nameString];
