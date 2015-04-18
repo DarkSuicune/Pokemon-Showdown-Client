@@ -1041,6 +1041,7 @@ var Tools = {
 		if (BattlePokemonSprites && BattlePokemonSprites[id] && BattlePokemonSprites[id].front && BattlePokemonSprites[id].front.anif && pokemon.gender === 'F') {
 			id+='-f';
 		}
+		if (customSprites[id + "-front" + shiny]) return customSprites["id" + "-front" + shiny];
 		return 'background-image:url(' + Tools.resourcePrefix + 'sprites/bw'+shiny+'/'+id+'.png)';
 	},
 
