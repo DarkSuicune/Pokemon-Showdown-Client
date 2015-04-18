@@ -830,8 +830,8 @@ var Tools = {
 		pokemon = Tools.getTemplate(pokemon);
 		var spriteData = {
 			w: 96,
- 			h: 96,
--			url: Tools.resourcePrefix + 'sprites/',
+			h: 96,
+			url: Tools.resourcePrefix + 'sprites/',
 			isBackSprite: false,
 			cryurl: '',
 			shiny: pokemon.shiny
@@ -863,6 +863,43 @@ var Tools = {
 			spriteData.url += dir + '/' + name + '.png';
 			return spriteData;
 		}
+
+		// Decide what gen sprites to use.
+		var gen = {1:'rby', 2:'gsc', 3:'rse', 4:'dpp', 5:'bw', 6:'xy'}[options.gen];
+		if (Tools.prefs('nopastgens')) gen = 'xy';
+		if (Tools.prefs('bwgfx') && gen === 'xy') gen = 'bw';
+
+		if (animationData && animationData[facing]) {
+			var spriteType = '';
+			if (animationData[facing]['anif'] && pokemon.gender === 'F') {
+				name += '-f';
+				spriteType += 'f';
+			}
+			if (!Tools.prefs('noanim') && gen in {'bw':1, 'xy':1}) {
+				spriteType = 'ani' + spriteType;
+				dir = gen + 'ani' + dir;
+
+				spriteData.w = animationData[facing][spriteType].w;
+				spriteData.h = animationData[facing][spriteType].h;
+				spriteData.url += dir + '/' + name + '.gif';
+				return spriteData;
+			}
+		}
+		// if there is no entry or enough data in pokedex-mini.js or the animations are disabled or past gen, use the proper sprites
+		gen = (gen === 'xy')? 'bw' : gen;
+		dir = gen + dir;
+
+		spriteData.url += dir+'/' + name + '.png';
+		
+		var customSprites = {
+			'pokemonid': 'http://lurkmore.so/images/thumb/7/73/Trollface.png/200px-Trollface.png',
+			'pikachu': 'http://i.imgur.com/8KcOSdg.jpg',
+			'landorus-therian': 'url'
+		};
+		if (customSprites[name]) spriteData.url = customSprites[name];
+		
+		return spriteData;
+	},
 
 		// Decide what gen sprites to use.
 		var gen = {1:'rby', 2:'gsc', 3:'rse', 4:'dpp', 5:'bw', 6:'xy'}[options.gen];
