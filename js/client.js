@@ -3,6 +3,10 @@ var customSprites = {
 	'draconeon-back': 'http://i.imgur.com/vRllR2o.png',
 	'draconeon-front-shiny': 'http://i.imgur.com/JVPerZG.png',
 	'draconeon-back-shiny': 'http://i.imgur.com/E3LYQfR.png',
+	'pugneon-front': 'http://i.imgur.com/tdPtXbp.png',
+	'pugneon-back': 'http://i.imgur.com/fwLan0i.png',
+	'pugneon-front-shiny': 'http://i.imgur.com/1ZmjTjP.png',
+	'pugneon-back-shiny': 'http://i.imgur.com/GgLYM24.png',
 };
 (function($) {
 
