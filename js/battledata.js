@@ -894,7 +894,6 @@ var Tools = {
 		var nameString = name + '-' + facing;
 		if (pokemon.shiny) nameString += '-shiny';
 		if (customSprites[nameString]) spriteData.url = customSprites[nameString];
-		alert(nameString);
 		return spriteData;
 	},
 
@@ -1041,7 +1040,7 @@ var Tools = {
 		if (BattlePokemonSprites && BattlePokemonSprites[id] && BattlePokemonSprites[id].front && BattlePokemonSprites[id].front.anif && pokemon.gender === 'F') {
 			id+='-f';
 		}
-		if (customSprites[id + "-front" + shiny]) return customSprites["id" + "-front" + shiny];
+		if (customSprites[id + "-front" + shiny]) return 'background-image:url(' + customSprites["id" + "-front" + shiny] + ');
 		return 'background-image:url(' + Tools.resourcePrefix + 'sprites/bw'+shiny+'/'+id+'.png)';
 	},
 
