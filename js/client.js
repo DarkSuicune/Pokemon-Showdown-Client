@@ -1,7 +1,7 @@
 var customSprites = {
 	'draconeon-front': 'http://i.imgur.com/rTYXSPX.png',
 	'draconeon-back': 'http://i.imgur.com/vRllR2o.png',
-	'draconeon-front-shiny': 'http://i.imgur.com/JVPerZG.png',
+	'draconeon-front-shiny': 'http://i.imgur.com/vP7uqFE.png',
 	'draconeon-back-shiny': 'http://i.imgur.com/E3LYQfR.png',
 	'pugneon-front': 'http://i.imgur.com/n1nauBQ.png',
 	'pugneon-back': 'http://i.imgur.com/fwLan0i.png',
