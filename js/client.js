@@ -1,16 +1,22 @@
 var customSprites = {
-	'draconeon-front': 'http://i.imgur.com/1pEvWZP.png',
+	'draconeon-front': 'http://i.imgur.com/Bea827S.png',
 	'draconeon-back': 'http://i.imgur.com/vRllR2o.png',
 	'draconeon-front-shiny': 'http://i.imgur.com/JVPerZG.png',
 	'draconeon-back-shiny': 'http://i.imgur.com/E3LYQfR.png',
-	'pugneon-front': 'http://i.imgur.com/tdPtXbp.png',
+	'pugneon-front': 'http://i.imgur.com/n1nauBQ.png',
 	'pugneon-back': 'http://i.imgur.com/fwLan0i.png',
 	'pugneon-front-shiny': 'http://i.imgur.com/1ZmjTjP.png',
 	'pugneon-back-shiny': 'http://i.imgur.com/GgLYM24.png',
-	'argenteon-front': 'http://i.imgur.com/ecuUlLm.png',
+	'argenteon-front': 'http://i.imgur.com/zo1lN5G.png',
 	'argenteon-back': 'http://i.imgur.com/M0e3lNm.png',
 	'argenteon-front-shiny': 'http://i.imgur.com/ShXGXck.png',
 	'argenteon-back-shiny': 'http://i.imgur.com/8QJ0p3j.png',
+	'arachneon-front': 'http://i.imgur.com/QyIgVme.png',
+	'aereon-front': 'http://i.imgur.com/W43te6a.png',
+	'obsideon-front': 'http://i.imgur.com/n5iU7UC.png',
+	'blighteon-front': 'http://i.imgur.com/7qXBUFk.png',
+	'fosseon-front': 'http://i.imgur.com/M61fGn4.png',
+	'obliveon-front': 'http://i.imgur.com/MSrBMAE.png',
 };
 (function($) {
 
