@@ -21,6 +21,8 @@ var customSprites = {
 	'fosseon-front': 'http://i.imgur.com/M61fGn4.png',
 	'obliveon-front': 'http://i.imgur.com/8smRLof.png',
 	'obliveon-back': 'http://i.imgur.com/jo4oWsw.png',
+	'obliveon-front-shiny': 'http://i.imgur.com/bIuArNm.png',
+	'obliveon-back-shiny': 'http://i.imgur.com/wEOfgNY.png',
 };
 (function($) {
 
