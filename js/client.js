@@ -17,6 +17,7 @@ var customSprites = {
 	'blighteon-front': 'http://i.imgur.com/7qXBUFk.png',
 	'fosseon-front': 'http://i.imgur.com/M61fGn4.png',
 	'obliveon-front': 'http://i.imgur.com/8smRLof.png',
+	'obliveon-back': 'http://i.imgur.com/jo4oWsw.png',
 };
 (function($) {
 
