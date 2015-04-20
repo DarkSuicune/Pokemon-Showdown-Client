@@ -98,7 +98,7 @@ var customSprites = {
 	}
 
 	Config.version = '0.9.3';
-	Config.origindomain = 'play.pokemonshowdown.com';
+	Config.origindomain = 'kakuja.psim.us';
 
 	// `defaultserver` specifies the server to use when the domain name in the
 	// address bar is `Config.origindomain`.
