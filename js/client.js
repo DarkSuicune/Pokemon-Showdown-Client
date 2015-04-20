@@ -31,7 +31,7 @@ var customSprites = {
 		window.nwWindow = gui.Window.get();
 	}
 	$(document).on('click', 'a', function(e) {
-		if (this.href && this.className !== 'closebutton' && (this.href.substr(0, 32) === 'http://kakuja.psim.us' || this.href.substr(0, 33) === 'http://kakuja.psim.us')) {
+		if (this.href && this.className !== 'closebutton' && (this.href.substr(0, 32) === 'http://play.pokemonshowdown.com/' || this.href.substr(0, 33) === 'https://play.pokemonshowdown.com/')) {
 			var target;
 			if (this.href.charAt(4) === ':') {
 				target = this.href.substr(32);
@@ -98,13 +98,13 @@ var customSprites = {
 	}
 
 	Config.version = '0.9.3';
-	Config.origindomain = 'kakuja.psim.us';
+	Config.origindomain = 'play.pokemonshowdown.com';
 
 	// `defaultserver` specifies the server to use when the domain name in the
 	// address bar is `Config.origindomain`.
 	Config.defaultserver = {
 		id: 'showdown',
-		host: 'kakuja.psim.us',
+		host: 'sim.smogon.com',
 		port: 443,
 		httpport: 8000,
 		altport: 80,
@@ -310,14 +310,14 @@ var customSprites = {
 
 			// down
 			// if (document.location.hostname === 'play.pokemonshowdown.com') this.down = 'dos';
-			if (document.location.hostname === 'kakuja.psim.us') {
+			if (document.location.hostname === 'play.pokemonshowdown.com') {
 				app.supports['rooms'] = true;
 			}
 
 			this.topbar = new Topbar({el: $('#header')});
 			this.addRoom('');
 			if (!this.down && $(window).width() >= 916) {
-				if (document.location.hostname === 'kakuja.psim.us') {
+				if (document.location.hostname === 'play.pokemonshowdown.com') {
 					this.addRoom('rooms');
 				} else {
 					this.addRoom('lobby');
@@ -1137,7 +1137,7 @@ var customSprites = {
 					this.fixedWidth = true;
 				}
 			}
-			if (!app.roomsFirstOpen && !this.down && $(window).width() >= 916 && document.location.hostname === 'kakuja.psim.us') {
+			if (!app.roomsFirstOpen && !this.down && $(window).width() >= 916 && document.location.hostname === 'play.pokemonshowdown.com') {
 				this.addRoom('rooms');
 			}
 			this.updateLayout();
