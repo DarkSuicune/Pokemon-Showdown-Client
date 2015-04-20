@@ -23,6 +23,8 @@ var customSprites = {
 	'obliveon-back': 'http://i.imgur.com/jo4oWsw.png',
 	'obliveon-front-shiny': 'http://i.imgur.com/bIuArNm.png',
 	'obliveon-back-shiny': 'http://i.imgur.com/wEOfgNY.png',
+	'glaceonmega-front': 'http://i.imgur.com/yIlHpc7.png',
+
 };
 (function($) {
 
