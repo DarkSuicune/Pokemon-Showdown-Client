@@ -104,7 +104,7 @@ var customSprites = {
 	// address bar is `Config.origindomain`.
 	Config.defaultserver = {
 		id: 'showdown',
-		host: 'sim.smogon.com',
+		host: 'kakuja.psim.us',
 		port: 443,
 		httpport: 8000,
 		altport: 80,
