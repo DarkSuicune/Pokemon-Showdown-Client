@@ -103,7 +103,7 @@ var customSprites = {
 	// `defaultserver` specifies the server to use when the domain name in the
 	// address bar is `Config.origindomain`.
 	Config.defaultserver = {
-		id: 'showdown',
+		id: 'kakuja',
 		host: 'kakuja.psim.us',
 		port: 443,
 		httpport: 8000,
