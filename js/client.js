@@ -104,7 +104,7 @@ var customSprites = {
 	// address bar is `Config.origindomain`.
 	Config.defaultserver = {
 		id: 'kakuja',
-		host: 'kakuja.psim.us',
+		host: '73.10.53.242',
 		port: 443,
 		httpport: 8000,
 		altport: 80,
