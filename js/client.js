@@ -97,14 +97,14 @@ var customSprites = {
 		});
 	}
 
-	Config.version = '0.9.3';
-	Config.origindomain = 'kakuja.psim.us';
+Config.version = '0.9.3';
+	Config.origindomain = 'play.pokemonshowdown.com';
 
 	// `defaultserver` specifies the server to use when the domain name in the
 	// address bar is `Config.origindomain`.
 	Config.defaultserver = {
-		id: 'kakuja',
-		host: '73.10.53.242',
+		id: 'showdown',
+		host: 'sim.smogon.com',
 		port: 443,
 		httpport: 8000,
 		altport: 80,
