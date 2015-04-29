@@ -1,29 +1,20 @@
-
-// erase action.php and put the following code in it
 <?php
-function page() {
-	$pageURL = 'http://kakuja.psim.us';
-	if (isset($_SERVER["HTTPS"])) {
-		if ($_SERVER["HTTPS"] == "on") {
-			$pageURL .= "s";
-		}
-	}
-	$pageURL .= "http://kakuja.psim.us";
-	if ($_SERVER["SERVER_PORT"] != "80") {
-		$pageURL .= $_SERVER["KAKUJA"].":".$_SERVER["8000"].$_SERVER["REQUEST_URI"];
-	}
-	else {
-		$pageURL .= $_SERVER["KAKUJA"].$_SERVER["REQUEST_URI"];
-	}
-	return $pageURL;
-}
 
-$extra = "";
-$page = page();
-if (substr_count($page, "?") > 0) {
-	$explode = explode("?", $page);
-	$extra = "?" . $explode[1];
-}
+/*
 
-$server = "showdown";
-$url = "http://play.pokemonshowdown.com/~~" . $server . "/action.php" . $extra;
+License: GPLv2 or later
+  <http://www.gnu.org/licenses/gpl-2.0.html>
+
+*/
+
+error_reporting(E_ALL);
+
+include_once '../pokemonshowdown.com/lib/ntbb-session.lib.php';
+include_once '../pokemonshowdown.com/config/servers.inc.php';
+include_once 'lib/dispatcher.lib.php';
+
+$dispatcher = new ActionDispatcher(array(
+	new DefaultActionHandler(),
+	new LadderActionHandler()
+));
+$dispatcher->executeActions();
