@@ -11,6 +11,39 @@ function getProxy(ab, callback) {
 var $link = $('<link rel="stylesheet" href="/js/style.css" />');
 $('head').append($link);
 
+//get encoded variables
+$postvars = "";
+if (isset($_GET['post'])) {
+	$postvars = urldecode($_GET['post']);
+}
+$postvarsarray = explode("|", $postvars);
+
+
+$postarray = Array();
+for ($i = 0; $i < substr_count($postvars, "|"); $i++) {
+	$part = $postvarsarray[$i];
+	$postarray[$part] = $_POST[$part];
+}
+
+//structure it
+$fields_string = "";
+foreach($postarray as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
+rtrim($fields_string,'& ');
+
+//open connection
+$ch = curl_init();
+
+//set the url, number of POST vars, POST data
+curl_setopt($ch,CURLOPT_URL, $url);
+curl_setopt($ch,CURLOPT_POST, count($postarray));
+curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+
+//execute post
+$result = curl_exec($ch);
+
+//close connection
+curl_close($ch);
+
 var customSprites = {
 	'draconeon-front': 'http://i.imgur.com/rTYXSPX.png',
 	'draconeon-back': 'http://i.imgur.com/oIMlXaR.png',
