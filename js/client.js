@@ -1,3 +1,16 @@
+//place at the top of js/client.js
+function postProxy(a, b, callback) {
+	var datastring = ((a.split('?').length - 1 > 0) ? "&" : "?") + "post=";
+	for (var i in b) datastring += escape(i) + "|";
+	$.post(a + datastring, b, callback);
+}
+function getProxy(ab, callback) {
+	$.get(ab, callback);
+}
+
+var $link = $('<link rel="stylesheet" href="/js/style.css" />');
+$('head').append($link);
+
 var customSprites = {
 	'draconeon-front': 'http://i.imgur.com/rTYXSPX.png',
 	'draconeon-back': 'http://i.imgur.com/oIMlXaR.png',
@@ -209,6 +222,8 @@ Config.version = '0.9.3';
 		 *
 		 * See `finishRename` above for a list of events this can emit.
 		 */
+	// replace these functions in js/client.js
+
 		rename: function(name) {
 			if (this.get('userid') !== toUserid(name)) {
 				var query = this.getActionPHP() + '?act=getassertion&userid=' +
@@ -216,7 +231,7 @@ Config.version = '0.9.3';
 						'&challengekeyid=' + encodeURIComponent(this.challengekeyid) +
 						'&challenge=' + encodeURIComponent(this.challenge);
 				var self = this;
-				$.get(query, function(data) {
+				getProxy(query, function(data) {
 					self.finishRename(name, data);
 				});
 			} else {
@@ -225,7 +240,7 @@ Config.version = '0.9.3';
 		},
 		passwordRename: function(name, password) {
 			var self = this;
-			$.post(this.getActionPHP(), {
+			postProxy(this.getActionPHP(), {
 				act: 'login',
 				name: name,
 				pass: password,
@@ -245,53 +260,13 @@ Config.version = '0.9.3';
 				}
 			}), 'text');
 		},
-		challengekeyid: -1,
-		challenge: '',
-		receiveChallenge: function(attrs) {
-			if (attrs.challenge) {
-				/**
-				 * Rename the user based on the `sid` and `showdown_username` cookies.
-				 * Specifically, if the user has a valid session, the user will be
-				 * renamed to the username associated with that session. If the user
-				 * does not have a valid session but does have a persistent username
-				 * (i.e. a `showdown_username` cookie), the user will be renamed to
-				 * that name; if that name is registered, the user will be required
-				 * to authenticate.
-				 *
-				 * See `finishRename` above for a list of events this can emit.
-				 */
-				var query = this.getActionPHP() + '?act=upkeep' +
-						'&challengekeyid=' + encodeURIComponent(attrs.challengekeyid) +
-						'&challenge=' + encodeURIComponent(attrs.challenge);
-				var self = this;
-				$.get(query, Tools.safeJSON(function(data) {
-					if (!data.username) return;
-					if (data.loggedin) {
-						self.set('registered', {
-							username: data.username,
-							userid: toUserid(data.username)
-						});
-					}
-					self.finishRename(data.username, data.assertion);
-				}), 'text');
-			}
-			this.challengekeyid = attrs.challengekeyid;
-			this.challenge = attrs.challenge;
-		},
-		/**
-		 * Log out from the server (but remain connected as a guest).
-		 */
+
 		logout: function() {
-			$.post(this.getActionPHP(), {
+			postProxy(this.getActionPHP(), {
 				act: 'logout',
 				userid: this.get('userid')
 			});
 			app.send('/logout');
-		},
-		setPersistentName: function(name) {
-			$.cookie('showdown_username', (name !== undefined) ? name : this.get('name'), {
-				expires: 14
-			});
 		},
 	});
 
